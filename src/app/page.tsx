@@ -87,7 +87,7 @@ export default function LandingPage() {
           <div className="mx-auto max-w-3xl">
             <div className="mb-4 inline-flex items-center gap-2 rounded-full border border-primary/30 bg-primary/10 px-3 py-1 text-xs font-medium text-primary">
               <span className="h-1.5 w-1.5 rounded-full bg-primary" />
-              FCA Consumer Duty — July 2023 deadline compliant
+              FCA Consumer Duty — PRIN 2A compliant
             </div>
             <h1 className="mt-6 text-5xl font-bold tracking-tight text-foreground md:text-6xl">
               Consumer Duty compliance,{" "}
