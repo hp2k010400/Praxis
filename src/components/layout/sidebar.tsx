@@ -19,49 +19,17 @@ import { cn } from "@/lib/utils";
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/components/ui/tooltip";
 
 const navItems = [
-  {
-    title: "Dashboard",
-    href: "/dashboard",
-    icon: LayoutDashboard,
-  },
-  {
-    title: "Assessments",
-    href: "/assessments",
-    icon: ClipboardList,
-  },
-  {
-    title: "Products",
-    href: "/products",
-    icon: Package,
-  },
-  {
-    title: "Outcomes",
-    href: "/outcomes",
-    icon: Target,
-  },
-  {
-    title: "Reports",
-    href: "/reports",
-    icon: FileBarChart2,
-  },
+  { title: "Dashboard", href: "/dashboard", icon: LayoutDashboard },
+  { title: "Assessments", href: "/assessments", icon: ClipboardList },
+  { title: "Products", href: "/products", icon: Package },
+  { title: "Outcomes", href: "/outcomes", icon: Target },
+  { title: "Reports", href: "/reports", icon: FileBarChart2 },
 ];
 
 const secondaryItems = [
-  {
-    title: "Team",
-    href: "/team",
-    icon: Users,
-  },
-  {
-    title: "Billing",
-    href: "/billing",
-    icon: CreditCard,
-  },
-  {
-    title: "Settings",
-    href: "/settings",
-    icon: Settings,
-  },
+  { title: "Team", href: "/team", icon: Users },
+  { title: "Billing", href: "/billing", icon: CreditCard },
+  { title: "Settings", href: "/settings", icon: Settings },
 ];
 
 function NavItem({
@@ -119,16 +87,16 @@ export function Sidebar({ collapsed = false }: { collapsed?: boolean }) {
           collapsed ? "w-16" : "w-60"
         )}
       >
-        {/* Logo */}
+        {/* Logo — links back to home */}
         <div className={cn("flex h-16 items-center border-b border-border px-4", collapsed && "justify-center")}>
-          <div className="flex items-center gap-2">
+          <Link href="/" className="flex items-center gap-2">
             <div className="flex h-8 w-8 shrink-0 items-center justify-center rounded-lg bg-primary">
               <Shield className="h-4 w-4 text-primary-foreground" />
             </div>
             {!collapsed && (
               <span className="text-base font-semibold tracking-tight">Praxis</span>
             )}
-          </div>
+          </Link>
         </div>
 
         {/* Nav */}
@@ -169,7 +137,7 @@ export function Sidebar({ collapsed = false }: { collapsed?: boolean }) {
             </Tooltip>
           ) : (
             <Link
-              href="#"
+              href="/docs"
               className="flex items-center gap-3 rounded-lg px-3 py-2 text-sm text-muted-foreground hover:bg-accent hover:text-accent-foreground transition-colors"
             >
               <HelpCircle className="h-4 w-4" />
